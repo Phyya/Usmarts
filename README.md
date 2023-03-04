@@ -28,7 +28,10 @@ Settings: This feature houses basic settings that includes adjusting sound, game
 
 User Profile: Players can view their score histories and other achievements if there are any.
 
+Chat Bot: We built the chat bot using Appy pie.com.
+
 link to TRD: https://app.gitbook.com/o/4e0GoXxUuM7rFc3S0Cg3/s/RllrlLnzU614MB5jRvFq/~/changes/4/app-features-and-requirements
+
 
 ## CONTRIBUTION GUIDE
 
