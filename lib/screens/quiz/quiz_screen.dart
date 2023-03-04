@@ -11,8 +11,7 @@ class QuizScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        // Fluttter show the back button automatically
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color.fromARGB(0, 204, 18, 221),
         elevation: 0,
         actions: [
           TextButton(onPressed: _controller.nextQuestion, child: Text("Skip")),
