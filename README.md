@@ -32,6 +32,8 @@ Chat Bot: We built the chat bot using Appy pie.com.
 
 link to TRD: https://app.gitbook.com/o/4e0GoXxUuM7rFc3S0Cg3/s/RllrlLnzU614MB5jRvFq/~/changes/4/app-features-and-requirements
 
+Link to the Apk file: https://usmart-landing-page.vercel.app/usmart-apk.apk
+
 
 ## CONTRIBUTION GUIDE
 
