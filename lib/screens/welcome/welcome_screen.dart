@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
-import 'package:quiz_app/screens/quiz/quiz_screen.dart';
+import '../quiz/quiz_ category_page.dart';
+
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -24,14 +25,18 @@ class WelcomeScreen extends StatelessWidget {
                 Text(
                   "Welcome to U-Smart,let's play Trivia!",
                   style: Theme.of(context).textTheme.headlineMedium.copyWith(
-                      color: Color.fromRGBO(255, 255, 255, 1), fontWeight: FontWeight.bold),
+                      color: Color.fromRGBO(255, 255, 255, 1),
+                      fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 30,),
-                Text("Enter your Name below:",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                SizedBox(
+                  height: 30,
                 ),
+                Text(
+                  "Enter your Name below:",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Spacer(),
                 TextField(
@@ -44,9 +49,9 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Spacer(), 
+                Spacer(),
                 InkWell(
-                  onTap: () => Get.to(QuizScreen()),
+                  onTap: () => Get.to(QuizCategoryScreen()),
                   child: Container(
                     width: double.infinity,
                     alignment: Alignment.center,

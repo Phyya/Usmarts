@@ -5,9 +5,12 @@ import 'package:quiz_app/controllers/question_controller.dart';
 import 'components/body.dart';
 
 class QuizScreen extends StatelessWidget {
+  const QuizScreen({Key key, this.category}) : super(key: key);
+  final String category;
+
   @override
   Widget build(BuildContext context) {
-    QuestionController _controller = Get.put(QuestionController());
+    QuestionController _controller = Get.put(QuestionController(category));
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(

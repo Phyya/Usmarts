@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/controllers/question_controller.dart';
 
-
 class ScoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -25,12 +24,12 @@ class ScoreScreen extends StatelessWidget {
               "Score",
               style: Theme.of(context)
                   .textTheme
-                  .headline3
+                  .displaySmall
                   .copyWith(color: kSecondaryColor),
             ),
             Spacer(),
             Text(
-              "${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
+              "${_qnController.numOfCorrectAns * 10}/${_qnController.questions.length * 10}",
               style: Theme.of(context)
                   .textTheme
                   .headlineMedium
