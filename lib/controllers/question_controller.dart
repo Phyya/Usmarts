@@ -1,6 +1,6 @@
+import 'dart:developer';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
 import 'package:quiz_app/models/Questions.dart';
 import 'package:quiz_app/screens/score/score_screen.dart';
 
@@ -8,25 +8,35 @@ import 'package:quiz_app/screens/score/score_screen.dart';
 
 class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
-  // Lets animated our progress bar
-
+  // Lets animate our progress bar
+  final String category;
   AnimationController _animationController;
   Animation _animation;
+
+  QuestionController([this.category]) {
+    log('$category');
+    _questions = sample_data
+        .where(
+          (element) =>
+              element['category'].toString().toLowerCase() ==
+              category.toString().toLowerCase(),
+        )
+        .map(
+          (question) => Question(
+              id: question['id'],
+              question: question['question'],
+              options: question['options'],
+              answer: question['answer_index']),
+        )
+        .toList();
+  }
   // so that we can access our animation outside
   Animation get animation => this._animation;
 
   PageController _pageController;
   PageController get pageController => this._pageController;
 
-  List<Question> _questions = sample_data
-      .map(
-        (question) => Question(
-            id: question['id'],
-            question: question['question'],
-            options: question['options'],
-            answer: question['answer_index']),
-      )
-      .toList();
+  List<Question> _questions = [];
   List<Question> get questions => this._questions;
 
   bool _isAnswered = false;
@@ -113,3 +123,6 @@ class QuestionController extends GetxController
     _questionNumber.value = index + 1;
   }
 }
+
+
+
